@@ -77,13 +77,13 @@ public:
 			point(0,0,0), normal(0,0,0) {}
 	};
 
-	std::vector<float> a = {0.f,0.f,0.f};
-	std::vector<float> alpha = {0.f,0.f,0.f};
-	std::vector<float> v = {0,0,0};
-	std::vector<float> w = {0,0,0};
-	std::vector<float> pivot = {0,0,0};
-	double c1 = 0;
-	double c2 = 0;
+	std::vector<float> a = {0.f,0.f,0.f}; //acceleration
+	std::vector<float> alpha = {0.f,0.f,0.f}; //angular acceleration
+	std::vector<float> v = {0,0,0}; //velocity
+	std::vector<float> w = {0,0,0}; //angular velocity
+	std::vector<float> pivot = {0,0,0}; //point to rotate around
+	double c1 = 0; //constant to update a by multiplication
+	double c2 = 0; //constant to update alpha by multiplication
 
 	std::shared_ptr<mcl::TetMesh> mesh;
 	PassiveCollision() : mesh(nullptr){}
